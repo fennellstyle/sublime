@@ -1,0 +1,9 @@
+{
+        "sublimelinter_executable_map":
+        {
+            "perl": "perl",
+            "php": "php",
+            "ruby": "ruby",
+            "javascript": "javascript"
+        }
+}

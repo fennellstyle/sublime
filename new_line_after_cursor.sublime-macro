@@ -1,0 +1,18 @@
+[
+	{
+		"args":
+		{
+			"by": "characters",
+			"forward": true,
+			"register": "\""
+		},
+		"command": "move"
+	},
+	{
+		"args":
+		{
+			"characters": "\n"
+		},
+		"command": "insert"
+	}
+]
