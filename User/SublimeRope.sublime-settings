@@ -1,0 +1,6 @@
+{
+
+    "case_sensitive_completion": false,
+    "auto_complete_triggers": [
+    	{"selector": "source.python - string - comment - constant.numeroc", "characters": "."} ]
+}

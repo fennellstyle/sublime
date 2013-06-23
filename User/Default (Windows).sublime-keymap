@@ -1,0 +1,144 @@
+[
+	// vim open new vertical window
+	{
+		"keys": ["ctrl+w","v"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 0.5, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1], [1, 0, 2, 1]]
+		}
+	},
+	// vim close all other windows
+	{
+		"keys": ["ctrl+w","o"],
+		"command": "set_layout",
+		"args":
+		{
+			"cols": [0.0, 1.0],
+			"rows": [0.0, 1.0],
+			"cells": [[0, 0, 1, 1]]
+		}
+	},
+	// convert a selected range of lines into a python style list of quoted items
+	{"keys": ["ctrl+shift+j"], "command": "run_macro_file", "args": {
+		"file": "Packages/User/list_to_line.sublime-macro"}
+	},
+
+	// view a copy of this file
+	{ "keys": ["ctrl+shift+o"], "command": "clone_file"},
+	// { "keys": ["shift+enter"], "command": "append", "args" : {"characters":"\n"}},
+	// ctrl+c commands to exit many contexts
+	{ "keys": ["ctrl+c"], "command": "exit_insert_mode",
+		"context":
+		[
+			{ "key": "setting.command_mode", "operand": false },
+			{ "key": "setting.is_widget", "operand": false }
+		]
+	},
+
+	{ "keys": ["ctrl+c"], "command": "exit_visual_mode",
+		"context":
+		[
+			{ "key": "setting.command_mode"},
+			{ "key": "num_selections", "operand": 1},
+			{ "key": "selection_empty", "operator": "equal", "operand": false, "match_all": false }
+		]
+	},
+
+	{ "keys": ["ctrl+c"], "command": "hide_auto_complete", "context":
+		[
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+
+	{ "keys": ["ctrl+c"], "command": "vi_cancel_current_action", "context":
+		[
+			{ "key": "setting.command_mode" },
+			{ "key": "selection_empty", "operator": "equal", "operand": true, "match_all": false },
+			{ "key": "vi_has_input_state" }
+		]
+	},
+
+	// all other escape sequences also set to ctrl+c
+	{ "keys": ["ctrl+c"], "command": "single_selection", "context":
+		[
+			{ "key": "num_selections", "operator": "not_equal", "operand": 1 }
+		]
+	},
+	{ "keys": ["ctrl+c"], "command": "clear_fields", "context":
+		[
+			{ "key": "has_next_field", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+c"], "command": "clear_fields", "context":
+		[
+			{ "key": "has_prev_field", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+c"], "command": "hide_panel", "args": {"cancel": true},
+		"context":
+		[
+			{ "key": "panel_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+c"], "command": "hide_overlay", "context":
+		[
+			{ "key": "overlay_visible", "operator": "equal", "operand": true }
+		]
+	},
+	{ "keys": ["ctrl+c"], "command": "hide_auto_complete", "context":
+		[
+			{ "key": "auto_complete_visible", "operator": "equal", "operand": true }
+		]
+	},
+
+
+	// duplicate lines
+	{ "keys": ["\\", "d"], "command": "duplicate_line" },
+
+	// create a new line after cursor
+	{ "keys": ["shift+enter"], "command": "run_macro_file", "args":
+		{"file": "Packages/User/new_line_after_cursor.sublime-macro"}
+	},
+
+	// like vim omni-complete but only for file paths
+	{ "keys": ["ctrl+x","ctrl+f"], "command": "file_system_comp_trigger"},
+
+	{ "keys": ["\\","c"], "command": "toggle_comment"},
+
+	// my undo/redo
+	{ "keys": ["u"], "command": "undo", "context": [{"key": "setting.command_mode"}] },
+
+	{ "keys": ["shift+u"], "command": "redo", "context": [{"key": "setting.command_mode"}] },
+
+	// make pasting like I have in vim, swap the p and P
+	{ "keys": ["p"], "command": "vi_paste_left",
+		"context": [{"key": "setting.command_mode"}]
+	},
+
+	{ "keys": ["P"], "command": "vi_paste_right",
+		"context": [{"key": "setting.command_mode"}]
+	},
+
+	// Some true vintage keymaps overwrite the sublime ones.  The most important one being ctrl+d.
+	// That will be remapped to ctrl+n for select Next match.  File new will be ctrl+shift+n
+	{ "keys": ["ctrl+n"], "command": "find_under_expand" },
+
+	{ "keys": ["ctrl+shift+n"], "command": "new_file" },
+
+	// help the multi-selection out by making select all easier
+	{ "keys": ["ctrl+shift+a"], "command": "find_all_under" },
+
+	// move this group to the right or left
+	{ "keys": ["ctrl+w", "ctrl+l"], "command": "move_to_group", "args": { "group": 1 } },
+	{ "keys": ["ctrl+w", "ctrl+h"], "command": "move_to_group", "args": { "group": 0 } },
+
+	// keeps from closing windows because of muscle memory
+	{ "keys": ["ctrl+w", "w"], "command": "toggle_group",
+		"context": [{"key": "setting.vintage_ctrl_keys"}, {"key": "setting.command_mode"}]
+	}
+
+]
+

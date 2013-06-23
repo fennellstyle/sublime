@@ -1,0 +1,24 @@
+[
+    {
+        "caption": ":w - Save",
+        "command": "save"
+    },
+    {
+        "caption": ":e - Revert",
+        "command": "revert"
+    },
+    {
+        "caption": ":0 - BOF",
+        "command": "move_to",
+        "args": {"to": "bof"}
+    },
+    {
+        "caption": ":q - Close",
+        "command": "close"
+    },
+    {
+        "caption": ":$ - EOF",
+        "command": "move_to",
+        "args": {"to": "eof"}
+    }
+]

@@ -1,0 +1,60 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Monokai.tmTheme",
+	"font_size": 13,
+	"ignored_packages": [],
+
+    // Spacing between the gutter and the text
+    "margin": 0,
+
+	// Enables/disables standard Vi key bindings including the Ctrl modifier
+	// that may override some platform-specific conventions.
+	// On OS X, this value is overridden in the platform specific settings, so
+	// you'll need to place this line in your user settings to override it.
+	"vintage_ctrl_keys": true,
+
+	// Always propagate copied text to the system clipboard.
+	"vintage_use_clipboard": true,
+
+	// Whether to enter command mode when opening a file.
+	"vintage_start_in_command_mode": true,
+
+    // Set to true to insert spaces when tab is pressed
+	"translate_tabs_to_spaces": true,
+
+    // If enabled, will highlight any line with a caret
+    "highlight_line": true,
+
+    // Valid values are "smooth", "phase", "blink", "wide" and "solid".
+    "caret_style": "phase",
+
+    // Set to true to removing trailing white space on save
+    "trim_trailing_white_space_on_save": true,
+
+    // Set to true to ensure the last line of the file ends in a newline
+    // character when saving
+    "ensure_newline_at_eof_on_save": true,
+
+    // By default, auto complete will commit the current completion on enter.
+    // This setting can be used to make it complete on tab instead.
+    // Completing on tab is generally a superior option, as it removes
+    // ambiguity between committing the completion and inserting a newline.
+    "auto_complete_commit_on_tab": true,
+
+    // By default, shift+tab will only unindent if the selection spans
+    // multiple lines. When pressing shift+tab at other times, it'll insert a
+    // tab character - this allows tabs to be inserted when tab_completion is
+    // enabled. Set this to true to make shift+tab always unindent, instead of
+    // inserting tabs.
+    "shift_tab_unindent": true,
+
+    // Set to 0 to disable smooth scrolling. Set to a value between 0 and 1 to
+    // scroll slower, or set to larger than 1 to scroll faster
+    "scroll_speed": 0.1,
+
+    // Makes tabs with modified files more visible
+    "highlight_modified_tabs": true,
+
+    // Show folders in the side bar in bold
+    "bold_folder_labels": true
+
+}
