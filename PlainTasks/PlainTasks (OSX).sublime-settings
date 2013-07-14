@@ -1,7 +1,7 @@
 {
   "open_tasks_bullet": "☐", // options: - | ❍ | ❑ | ■ | □ | ☐ | ▪ | ▫ | – | — ≡ → ›
   "done_tasks_bullet": "✔", // options: + | ✓ | ✔
-  "canc_tasks_bullet": "✘", // options: x | ✘
+  "cancelled_tasks_bullet": "✘", // options: x | ✘
   "before_tasks_bullet_margin": 1,
   "date_format": "(%y-%m-%d %H:%M)",
   "done_tag": true, // related to @cancelled as well
@@ -10,6 +10,8 @@
   "font_size": 15,
   "font_face": "Consolas",
   "draw_indent_guides": false,
+  "auto_indent": true,
+  "smart_indent": true, // indenting the next line after projects and tasks
   "line_numbers": false,
   "gutter": true,
   "margin": 2,
